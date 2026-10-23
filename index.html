@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calendar Hours – total time per event from any calendar file (free)</title><meta name="description" content="Upload a calendar .ics export and see total hours per event name. Free, private, no sign-in."><link rel="stylesheet" href="style.css">
+<!-- GoatCounter placeholder (needs Amin's approval + account): <script data-goatcounter="https://CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+</head><body><nav><a href="index.html">Calendar Hours</a><a href="google-calendar-hours-per-event.html">Google Calendar</a><a href="ics-to-timesheet.html">ICS to timesheet</a><a href="outlook-calendar-time-report.html">Outlook</a></nav><h1>Total hours per event in your calendar</h1><p>Export your calendar as an .ics file, drop it here, and see how many hours went to each event name. No account and no Google sign-in.</p><div class="tool">
+<p><b>Your file never leaves your browser.</b> Nothing is uploaded.</p>
+<input type="file" id="file" accept=".ics,text/calendar"> <button id="sample">Try a sample calendar</button><br>
+<label>From <input type="date" id="from"></label><label>To <input type="date" id="to"></label>
+<label>Group by <select id="mode"><option value="title">Exact event title</option><option value="prefix">Text before ":" or "-"</option></select></label>
+<label><input type="checkbox" id="ic" checked> Ignore case</label><label><input type="checkbox" id="allday"> Include all-day events</label>
+<label>Only titles containing <input id="filter" size="12"></label><label>Hourly rate <input id="rate" type="number" min="0" step="1" style="width:6em"></label>
+<div id="results" hidden><table><thead id="thead"></thead><tbody id="tbody"></tbody></table><p id="total"></p><button id="csv">Download CSV</button></div>
+</div>
+<p>Need saved reports, multiple calendars, or invoices? <a class="pro" id="pro" href="pro.html">Get Pro (waitlist)</a></p><h2>How it works</h2><ol><li>Export your calendar as .ics (Google, Outlook, Apple or any CalDAV app).</li><li>Choose the file above.</li><li>Pick a date range and grouping, then download the CSV.</li></ol><footer><small>Free, runs entirely in your browser. Expands weekly/daily/monthly repeats and skips cancelled or deleted occurrences. Times use each event's own clock time. AI-assisted build.</small></footer><script src="app.js"></script></body></html>
